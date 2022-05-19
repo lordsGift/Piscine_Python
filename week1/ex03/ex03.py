@@ -6,16 +6,18 @@
 #    By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 22:58:10 by mmarinel          #+#    #+#              #
-#    Updated: 2022/05/19 11:38:53 by mmarinel         ###   ########.fr        #
+#    Updated: 2022/05/19 12:03:44 by mmarinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-from functools import reduce
 from collections import defaultdict
+from functools import reduce
 
-def as_reversed(couple):
-	# print (tuple(reversed(couple)))
+def	as_reversed(couple):
 	return (tuple(reversed(couple)))
+
+def	to_string(acc, el):
+	return (str(acc) + str(el) + " ")
 
 def	create_and_print_dict():
 	d = [
@@ -44,7 +46,8 @@ def	create_and_print_dict():
 	my_dict = defaultdict(list)
 	for k, v in musicians:
 		my_dict[k].append(v)
-	sorted(my_dict.items())
-	print(my_dict)
+	my_dict = dict(reversed(sorted(my_dict.items())))
+	for k in my_dict:
+		print(str(k) + " : " + str(reduce(to_string, my_dict[k], "")[:-1]))
 
 create_and_print_dict()
