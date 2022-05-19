@@ -6,7 +6,7 @@
 #    By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 22:58:10 by mmarinel          #+#    #+#              #
-#    Updated: 2022/05/19 10:14:18 by mmarinel         ###   ########.fr        #
+#    Updated: 2022/05/19 18:13:32 by mmarinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,4 +27,5 @@ def as_int(n):
 
 if len(sys.argv) != 4:
 	print ("Error: Wrong number of arguments (3 expected)")
-print(reduce(sum, map(to_secs, list(enumerate(map(as_int, sys.argv[1:])))), 0))
+else:
+	print(reduce(sum, map(to_secs, list(enumerate(map(as_int, sys.argv[1:])))), 0))
