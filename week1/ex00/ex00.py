@@ -6,15 +6,15 @@
 #    By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 22:58:17 by mmarinel          #+#    #+#              #
-#    Updated: 2022/05/18 22:58:29 by mmarinel         ###   ########.fr        #
+#    Updated: 2022/05/19 13:27:54 by mmarinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import sys
 from functools import reduce
 
-def sum(n, m):
-	return (n + m)
+def sum(acc, m):
+	return (acc + m)
 
 def as_int(n):
 	if (not n.isdigit()):
