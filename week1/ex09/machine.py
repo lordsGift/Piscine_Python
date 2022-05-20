@@ -6,7 +6,7 @@
 #    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/20 11:11:03 by earendil          #+#    #+#              #
-#    Updated: 2022/05/20 13:56:40 by earendil         ###   ########.fr        #
+#    Updated: 2022/05/20 23:06:10 by earendil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ class	CoffeeMachine:
 			super().__init__("This coffee machine has to be repaired.")
 
 	def	repair(self):
-		self.__drinks_served = 0
+		if self.__drinks_served == BEV_SERVED_BEFORE_FAILURE:
+			self.__drinks_served = 0
 
 	def	serve(self, beverage : TypeVar('T', bound=HotBeverage)):
 		if self.__drinks_served == BEV_SERVED_BEFORE_FAILURE:
