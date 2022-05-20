@@ -6,11 +6,11 @@
 #    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/20 11:11:03 by earendil          #+#    #+#              #
-#    Updated: 2022/05/20 13:49:50 by earendil         ###   ########.fr        #
+#    Updated: 2022/05/20 13:56:40 by earendil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-BEV_SERVED_BEFORE_FAILURE = 3
+BEV_SERVED_BEFORE_FAILURE = 10
 
 import os
 import random
@@ -48,6 +48,8 @@ class	CoffeeMachine:
 
 cheap_machine = CoffeeMachine()
 
+
+########################################### TESTS #############################################
 while True:
 	while True:
 		os.system("clear")
@@ -55,13 +57,13 @@ while True:
 		if action == "yes" or action == "no":
 			break
 		print("please enter a valid choice : yes/no\n")
-		sleep(1)
+		input("press any key to continue...")
 
 	if action == "yes":
 		print("See you later pal!\n")
 		sleep(0.5)
 		break
-	
+
 	while True:
 		print ("\nMenu:")
 		print("\n")
