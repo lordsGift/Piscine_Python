@@ -1,14 +1,21 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ex06.py                                            :+:      :+:    :+:    #
+#    my_sort.py                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+         #
+#    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 22:58:10 by mmarinel          #+#    #+#              #
-#    Updated: 2022/05/19 15:45:34 by mmarinel         ###   ########.fr        #
+#    Updated: 2022/05/21 10:53:11 by earendil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+# Come abbiamo inteso l'esercizio:
+#
+#	1). ordinare secondo l'anno di nascita
+#	2). quando l'anno coincide, adottare l'ordinamento alfabetico sul nome
+#
+#	3). alla fine printare la lista risultante.
 
 from functools import reduce
 

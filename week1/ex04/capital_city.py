@@ -1,20 +1,16 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ex05.py                                            :+:      :+:    :+:    #
+#    capital_city.py                                    :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+         #
+#    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 22:58:10 by mmarinel          #+#    #+#              #
-#    Updated: 2022/05/19 14:48:57 by mmarinel         ###   ########.fr        #
+#    Updated: 2022/05/21 10:45:59 by earendil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import sys
-from functools import reduce
-
-def	as_reversed(couple):
-	return (tuple(reversed(couple)))
 
 states = {
 	"Oregon" : "OR",
@@ -28,13 +24,8 @@ capital_cities = {
 	"NJ": "Trenton",
 	"CO": "Denver"
 }
-
-states_inverted = dict(map(as_reversed, list(states.items())))
-capital_cities_inverted = dict(map(as_reversed, list(capital_cities.items())))
-
-if len(sys.argv) != 2:
-	exit()
-elif not sys.argv[1] in capital_cities_inverted.keys() or not capital_cities_inverted[sys.argv[1]] in states_inverted.keys():
-	sys.stdout.write("Unknown state" + "\n")
-else:
-	sys.stdout.write(states_inverted[capital_cities_inverted[sys.argv[1]]] + "\n")
+if len(sys.argv) == 2:                     # Controllo inutile per questo esercizio, ma necessario se decidessi di ampliare i dizionari
+	if not sys.argv[1] in states.keys() or not states[sys.argv[1]] in capital_cities.keys():
+		sys.stdout.write("Unknown state" + "\n")
+	else:
+		sys.stdout.write(capital_cities[states[sys.argv[1]]] + "\n")
