@@ -6,7 +6,7 @@
 #    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/20 11:11:03 by earendil          #+#    #+#              #
-#    Updated: 2022/05/20 23:06:10 by earendil         ###   ########.fr        #
+#    Updated: 2022/05/21 11:09:53 by earendil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,25 +86,32 @@ while True:
 				print("Here you are: " +  cheap_machine.serve(HotBeverage).description())
 				print("\n")
 				input("press any key to continue...")
+				break
 			elif (beverage == "coffee"):
 				print("Here you are: " + cheap_machine.serve(Coffee).description())
 				print("\n")
 				input("press any key to continue...")
+				break
 			elif (beverage == "tea"):
 				print("Here you are: " + cheap_machine.serve(Tea).description())
 				print("\n")
 				input("press any key to continue...")
+				break
 			elif (beverage == "chocolate"):
 				print("Here you are: " + cheap_machine.serve(Chocolate).description())
 				print("\n")
 				input("press any key to continue...")
+				break
 			elif (beverage == "cappuccino"):
 				print("Here you are: " + cheap_machine.serve(Cappuccino).description())
 				print("\n")
 				input("press any key to continue...")
+				break
 			else:
 				print("please, choose a correct beverage\n")
 				input("press any key to continue...")
+				os.system("clear")
+				continue
 		except CoffeeMachine.BrokenMachineException as bme:
 			print(bme)
 			print("Waiting for the guy...")
@@ -114,5 +121,4 @@ while True:
 			sleep(3)
 			print("repaired!\n\n")
 			input("press any key to continue...")
-		finally:
 			break
