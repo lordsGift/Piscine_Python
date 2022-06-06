@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    print_secs.py                                      :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: earendil <earendil@student.42.fr>          +#+  +:+       +#+         #
+#    By: mmarinel <mmarinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/18 22:58:10 by mmarinel          #+#    #+#              #
-#    Updated: 2022/05/21 10:35:03 by earendil         ###   ########.fr        #
+#    Updated: 2022/05/21 17:51:18 by mmarinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,6 @@ try:
 	if len(sys.argv) != 4:
 		raise WrongInputException("Wrong number of arguments (3 expected)")
 	else:
-		print(reduce(sum, map(to_secs, list(enumerate(map(as_int, sys.argv[1:])))), 0))
+		print(reduce(sum, map(to_secs, list(enumerate(reversed(list(map(as_int, sys.argv[1:])))))), 0))
 except WrongInputException as e:
 	print(e)
